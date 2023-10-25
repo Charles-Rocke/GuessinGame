@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginHorizontal: 24,
     marginTop: 100,
-    backgroundColor: "#000033",
+    backgroundColor: "#FFFCF0",
     borderRadius: 8,
     // elevation: 8, android box shadow name
     shadowColor: "black", // iOS uses shadowColor, shadowOffset, shadowRadius, shadowOpacity to create a shadow
@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     fontSize: 32,
-    borderBottomColor: "#FFFCF0",
+    borderBottomColor: "#000033",
     borderBottomWidth: 2,
-    color: "#FFFCF0",
+    color: "#000033",
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
