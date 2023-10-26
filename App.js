@@ -1,8 +1,21 @@
+import { useState } from "react";
 import { StyleSheet, Text, ImageBackground } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import StartGameScreen from "./screens/StartGameScreen";
+import GameScreen from "./screens/GameScreen";
 
 export default function App() {
+  let screen = <StartGameScreen onConfirmedInput={confirmedInputHandler} />;
+  const [userInput, setUserInput] = useState();
+
+  function confirmedInputHandler(confirmedInput) {
+    setUserInput(confirmedInput);
+  }
+
+  if (userInput) {
+    screen = <GameScreen />;
+    console.log("game screen");
+  }
   return (
     <LinearGradient colors={["#000033", "#FFFCF0"]} style={styles.rootScreen}>
       <ImageBackground
@@ -11,7 +24,7 @@ export default function App() {
         style={styles.rootScreen}
         imageStyle={styles.backgroundImage}
       >
-        <StartGameScreen />
+        {screen}
       </ImageBackground>
     </LinearGradient>
   );
