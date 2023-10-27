@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, TextInput, StyleSheet, Alert } from "react-native";
-import PrimaryButton from "../components/PrimaryButton";
+import PrimaryButton from "../components/ui/PrimaryButton";
+import Colors from "../utilities/colors";
 
 function StartGameScreen({ onConfirmedInput }) {
   const [userInput, setUserInput] = useState("");
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginHorizontal: 24,
     marginTop: 100,
-    backgroundColor: "#FFFCF0",
+    backgroundColor: Colors.primary500,
     borderRadius: 8,
     // elevation: 8, android box shadow name
     shadowColor: "black", // iOS uses shadowColor, shadowOffset, shadowRadius, shadowOpacity to create a shadow
@@ -70,9 +71,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     fontSize: 32,
-    borderBottomColor: "#000033",
+    borderBottomColor: Colors.secondary600,
     borderBottomWidth: 2,
-    color: "#000033",
+    color: Colors.secondary600,
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
